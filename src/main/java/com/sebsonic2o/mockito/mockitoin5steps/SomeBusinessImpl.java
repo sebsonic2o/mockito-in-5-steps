@@ -3,6 +3,11 @@ package com.sebsonic2o.mockito.mockitoin5steps;
 public class SomeBusinessImpl {
 	private DataService dataService;
 
+	public SomeBusinessImpl(DataService dataService) {
+		super();
+		this.dataService = dataService;
+	}
+
 	int findGreatestData() {
 		int[] data = dataService.retrieveAllData();
 		int greatest = Integer.MIN_VALUE;
